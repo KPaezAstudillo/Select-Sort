@@ -1,1 +1,126 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+    background-color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 2rem;
+}
+
+input {
+    width: 250px;
+}
+
+.input {
+    margin-top: 2rem;
+    display: flex;
+    padding: 10px;
+}
+
+.input * {
+    margin: 5px;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 3px;
+}
+
+button {
+    background: rgb(94, 190, 29);
+}
+
+.card {
+    background-color: white;
+    width: 100px;
+    height: 160px;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    margin: 5px;
+    position: relative;
+    font-size: 4rem;
+}
+
+.spades::before {
+    content: '\2660';
+    font-size: 30px;
+    top: -5px;
+    left: 5px;
+    position: absolute;
+}
+
+.spades::after {
+    content: '\2660';
+    font-size: 30px;
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+}
+
+.cubs::before {
+    content: '\2663';
+    font-size: 30px;
+    width: 100%;
+    text-align: left;
+    border-radius: 10px 10px 0px 0px;
+    top: -5px;
+    left: 5px;
+    position: absolute;
+}
+
+.cubs::after {
+    content: '\2663';
+    font-size: 30px;
+    border-radius: 10px 10px 0px 0px;
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+}
+
+.hearts::before {
+    content: '\2665';
+    color: red;
+    font-size: 30px;
+    border-radius: 10px 10px 0px 0px;
+    top: -5px;
+    left: 5px;
+    position: absolute;
+
+}
+
+.hearts::after {
+    content: '\2665';
+    color: red;
+    font-size: 30px;
+    border-radius: 10px 10px 0px 0px;
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+}
+
+.diams::before {
+    content: '\2666';
+    color: red;
+    font-size: 30px;
+    border-radius: 10px 10px 0px 0px;
+    top: -5px;
+    left: 5px;
+    position: absolute;
+
+}
+
+.diams::after {
+    content: '\2666';
+    color: red;
+    font-size: 30px;
+    border-radius: 10px 10px 0px 0px;
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+}
+
+.numero.diams {
+    color: red;
+}
+
+.numero.hearts {
+    color: red;
+}
