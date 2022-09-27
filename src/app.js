@@ -85,29 +85,32 @@ let generateCard = () => {
 //   }
 //   return arr;
 // };
-
+//Algoritmo select y lo inserta en el HTML
 let selectSort = arr => {
-  let iteracion = 0;
   let min = 0;
-  while (min < arr.length - 1) {
+  let iteracion = 0;
+  while (min < arr.length) {
     let it = document.createElement("p");
     it.innerHTML = iteracion;
     bubbleLog.appendChild(it);
-    for (let i = min + 1; i < arr.length - 1; i++) {
-      createCard(arr[i], bubbleLog);
-      if (arr[min] > arr[i]) {
-        let aux = arr[min];
-        arr[min] = arr[i];
-        arr[i] = aux;
+    for (let j = 0; j < arr.length; j++) {
+      createCard(arr[j], bubbleLog);
+    }
+    for (let i = min + 1; i < arr.length; i++) {
+      // console.log(arr[i].numero);
+      if (arr[min].numero > arr[i].numero) {
+        let aux = arr[min].numero;
+        arr[min].numero = arr[i].numero;
+        arr[i].numero = aux;
       }
-      iteracion++;
     }
     min++;
+    iteracion++;
   }
   return arr;
 };
 
-//Aplica algoritmo burbuja a la lista de cartas
+//Aplica algoritmo a la lista de cartas
 let sortCards = () => {
   selectSort(listaCartas);
 };
